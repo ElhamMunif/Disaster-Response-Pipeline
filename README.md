@@ -20,19 +20,18 @@ Go to http://0.0.0.0:3001/
 The overall structure of the repository is as follows:
 
 - app
-| - template
-| |- master.html  # main page of web app
-| |- go.html  # classification result page of web app
-|- run.py  # Flask file that runs app
+master.html  # main page of web app
+ go.html  # classification result page of web app
+run.py  # Flask file that runs app
 
 - data
-|- disaster_categories.csv  # data to process 
-|- disaster_messages.csv  # data to process
-|- process_data.py
-|- DisasterResponse.db   # database to save clean data to
+disaster_categories.csv  # data to process 
+disaster_messages.csv  # data to process
+process_data.py
+DisasterResponse.db   # database to save clean data to
 
 # models
-|- train_classifier.py
+train_classifier.py
 
 
 For the machine learning portion, the data was split into a training set and a test set. Then, I created a machine learning pipeline that uses NLTK, as well as scikit-learn's Pipeline and GridSearchCV to output a final model that uses the message column to predict classifications for 36 categories (multi-output classification). Finally, the model was exported to a pickle file
